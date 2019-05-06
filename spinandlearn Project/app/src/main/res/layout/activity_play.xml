@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayActivity"
+    android:keepScreenOn="true"
+    android:background="@drawable/game_wallpaper"
+    android:id="@+id/confetti">
+
+
+    <LinearLayout android:id="@+id/hearts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <ImageView android:id="@+id/heart1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/heart"
+            android:layout_margin="2dp"/>
+
+        <ImageView android:id="@+id/heart2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/heart"
+            android:layout_margin="2dp"/>
+
+        <ImageView android:id="@+id/heart3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/heart"
+            android:layout_margin="2dp"/>
+
+        <ImageView android:id="@+id/heart4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/heart"
+            android:visibility="invisible"
+            android:layout_margin="2dp"/>
+
+        <ImageView android:id="@+id/heart5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/heart"
+            android:visibility="invisible"
+            android:layout_margin="2dp"/>
+
+        <ImageView android:id="@+id/heart6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/heart"
+            android:visibility="invisible"
+            android:layout_margin="2dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_below="@id/hearts">
+
+        <TextView android:id="@+id/round"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:gravity="start"
+            android:fontFamily="@font/stephia"/>
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:fontFamily="@font/stephia"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/base"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <include android:id="@+id/notelist" layout="@layout/base_view" />
+    </LinearLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <include android:id="@+id/notelist" layout="@layout/first_view" />
+        <include android:id="@+id/notelist" layout="@layout/second_view" />
+    </FrameLayout>
+
+    <!--<ImageView android:id="@+id/roulette"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rolutte_10"/>-->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/radius"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <include android:id="@+id/notelist" layout="@layout/radius_view" />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/triangle"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <include android:id="@+id/notelist" layout="@layout/triangle_view" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/spinBtn"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_design"
+        android:text="@string/spin"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        android:fontFamily="@font/stephia"/>
+
+    <LinearLayout android:id="@+id/bonusLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spinBtn"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        android:layout_marginBottom="-5dp">
+
+        <Button
+            android:id="@+id/spinBonusBtn"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_design"
+            android:text="@string/spin"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:fontFamily="@font/stephia"/>
+
+        <Button
+            android:id="@+id/leaveBtn"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_design"
+            android:text="@string/leave"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:fontFamily="@font/stephia"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
